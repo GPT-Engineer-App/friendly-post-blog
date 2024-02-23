@@ -149,26 +149,7 @@ const Index = () => {
   return (
     <Container maxW="container.md" py={10}>
       <VStack spacing={8}>
-        {!isLoggedIn && (
-          <>
-            <FormControl id="email">
-              <FormLabel>Email address</FormLabel>
-              <Input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-            </FormControl>
-            <FormControl id="password">
-              <FormLabel>Password</FormLabel>
-              <Input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-            </FormControl>
-            <HStack w="full">
-              <Button leftIcon={<FaSignInAlt />} onClick={handleLogin}>
-                Login
-              </Button>
-              <Button leftIcon={<FaUserPlus />} onClick={handleSignup}>
-                Signup
-              </Button>
-            </HStack>
-          </>
-        )}
+        {/* Login functionality is now handled by a separate Login component, so the code related to login form and state handling is removed from here */}
         {isLoggedIn && (
           <>
             <Heading>Create Post</Heading>
